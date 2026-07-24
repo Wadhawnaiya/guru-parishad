@@ -1,8 +1,14 @@
 # 🕉️ Guru Parishad — Council of the Gurus of India
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
-![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-8A63D2.svg)
-![Gurus](https://img.shields.io/badge/gurus-7-orange.svg)
+<p align="center">
+  <img src="guru-parishad.png" alt="The Guru Parishad in session — seven Gurus of India seated in council around a sacred fire in a torch-lit stone hall, rendered as an aged sepia photograph" width="860">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
+  <img src="https://img.shields.io/badge/Claude%20Code-plugin-8A63D2.svg" alt="Claude Code plugin">
+  <img src="https://img.shields.io/badge/gurus-7-orange.svg" alt="7 gurus">
+</p>
 
 > Bring your hardest decision before **seven of the greatest Gurus of India**.
 > They analyse it, cross-examine each other, and hand you one clear verdict.
