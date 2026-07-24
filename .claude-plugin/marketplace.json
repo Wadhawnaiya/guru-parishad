@@ -1,0 +1,15 @@
+{
+  "name": "guru-parishad",
+  "description": "Marketplace for Guru Parishad — multi-persona deliberation with the gurus of India for Claude Code.",
+  "owner": {
+    "name": "Guide by Guru"
+  },
+  "plugins": [
+    {
+      "name": "parishad",
+      "source": "./",
+      "description": "7 gurus of India deliberate your hardest decisions — structured multi-round deliberation. One command: /parishad",
+      "version": "1.0.0"
+    }
+  ]
+}

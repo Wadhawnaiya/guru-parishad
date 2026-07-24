@@ -1,0 +1,19 @@
+{
+  "name": "parishad",
+  "displayName": "Guru Parishad — Council of the Gurus of India",
+  "version": "1.0.0",
+  "description": "7 gurus of India deliberate your hardest decisions — structured multi-round deliberation (blind analysis, anonymized cross-examination, weighted verdict) synthesized by the Sutradhaar. One command: /parishad.",
+  "author": {
+    "name": "Guide by Guru"
+  },
+  "license": "MIT",
+  "keywords": [
+    "deliberation",
+    "multi-agent",
+    "decision-making",
+    "debate",
+    "personas",
+    "india",
+    "gurus"
+  ]
+}
