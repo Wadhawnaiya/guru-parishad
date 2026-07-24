@@ -9,7 +9,7 @@ parishad:
   domain: "Statecraft, power, incentives & economics"
   polarity: "Secure the outcome — read incentives and leverage"
   polarity_pairs: ["vidura", "shankara"]
-  triads: ["strategy", "risk", "product", "conflict", "economics"]
+  triads: ["strategy", "risk", "product", "conflict"]
   duo_keywords: ["strategy", "power", "competition", "incentives", "money", "negotiation"]
   reasoning_method: strategic-realpolitik
 ---

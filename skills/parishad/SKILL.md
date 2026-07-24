@@ -178,7 +178,7 @@ synthesizer, not one of the 7 gurus. The Sutradhaar does NOT participate in Roun
 the final verdict in STEP 7 only, running as a Claude subagent (opus).
 
 Selection: if `--chairman <guru>` was passed, that guru synthesizes and sits out deliberation
-(the panel drops to the remaining members). Otherwise the Sutradhaar chairs and all 7 gurus
+(the panel drops to the remaining members). Otherwise the Sutradhaar chairs and all convened members
 deliberate. Record the choice in the verdict metadata.
 
 `[CHECKPOINT]` State the selected Chairman: the Sutradhaar (default), or the named `--chairman` guru and the members that remain deliberating.
@@ -377,9 +377,10 @@ After the verdict is rendered, the coordinator appends a `Session Metadata` bloc
 
 Required fields:
 - `schema_version: 1`
-- `mode`: full | quick | duo | triad
+- `mode`: full | quick | duo
 - `panel_size`: integer
 - `rounds_run`: integer (actual, not target — count any rounds that were truncated)
+- `chairman_failed_fallback`: yes | no
 - `tools_used`: yes if any subagent invoked Read/Grep/Glob/Bash/WebSearch/WebFetch; no otherwise
 
 Best-effort fields (write `~unknown` if not available):
@@ -397,6 +398,8 @@ Fast 2-round deliberation for simpler questions. No cross-examination.
 ### QUICK STEP 0: Select Panel
 
 Same panel selection as full mode Step 0. If no panel specified, default to best-matching triad via auto-selection.
+
+**Chairman**: Chairman = the **Sutradhaar** (non-deliberating, Claude opus) by default. If `--chairman <guru>` was passed, that guru synthesizes the verdict and **sits out deliberation** — remove it from the panel before Round 1 (if that leaves fewer than 2 deliberating members, keep the guru on the panel and note the chairman shares the panel).
 
 `[CHECKPOINT]` State selected members.
 
@@ -461,7 +464,7 @@ no option.
 
 ### QUICK STEP 3: Synthesize Quick Verdict (SUTRADHAAR)
 
-Dispatch synthesis to the Sutradhaar (or the `--chairman` guru selected via STEP 1.7). Use the Quick Verdict template below. Same fallback rule as STEP 7.
+Dispatch synthesis to the Sutradhaar (or the `--chairman` guru selected in QUICK STEP 0). Use the Quick Verdict template below. Same fallback rule as STEP 7.
 
 ---
 
@@ -474,6 +477,8 @@ Two-member dialectic for rapid opposing perspectives.
 1. If `--members name1,name2` → use those two members
 2. Otherwise → match problem against Duo Polarity Pairs table above, select the best-fitting pair
 3. State the selected pair and the tension they represent
+
+**Chairman**: Chairman = the **Sutradhaar** by default. `--chairman` in duo mode MUST name a guru who is NOT one of the two duo members (the chairman audits, not participates); if `--chairman` names a duo member, ignore it and use the Sutradhaar.
 
 `[CHECKPOINT]` State selected pair and tension.
 
@@ -529,7 +534,7 @@ Final statement. 50 words maximum. State your position. No new arguments.
 
 ### DUO STEP 4: Synthesize Duo Verdict (SUTRADHAAR)
 
-Dispatch synthesis to the Sutradhaar (or the `--chairman` guru selected via STEP 1.7). The Chairman must NOT be either of the two duo members (hard constraint — the Chairman audits, not participates; the Sutradhaar already satisfies this since it is none of the 7 gurus). Use the Duo Verdict template below. Same fallback rule as STEP 7.
+Dispatch synthesis to the Sutradhaar (or the `--chairman` guru selected in DUO STEP 0). The Chairman must NOT be either of the two duo members (hard constraint — the Chairman audits, not participates; the Sutradhaar already satisfies this since it is none of the 7 gurus). Use the Duo Verdict template below. Same fallback rule as STEP 7.
 
 ---
 
@@ -601,7 +606,7 @@ After acting on this verdict, revisit: Was this verdict useful? Was the recommen
 ### Session Metadata
 ```
 schema_version: 1
-mode: full | quick | duo | triad
+mode: full | quick | duo
 panel_size: <N>
 rounds_run: <N>
 chairman_failed_fallback: yes | no

@@ -9,7 +9,7 @@ parishad:
   domain: "Practical Vedanta — strength, action & service"
   polarity: "Arise, awake — turn the ideal into action"
   polarity_pairs: ["ramakrishna", "nagarjuna"]
-  triads: ["product", "strategy", "execution", "decision"]
+  triads: ["product", "execution", "leadership"]
   duo_keywords: ["action", "execution", "strength", "service", "ship", "courage", "leadership"]
   reasoning_method: karma-yoga-action
 ---

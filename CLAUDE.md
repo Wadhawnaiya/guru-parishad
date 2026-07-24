@@ -40,7 +40,7 @@ any existing one.
 
 - Keep agent prompts tight — no filler sentences
 - Grounding protocols use specific numeric constraints ("2-aphorism cap", "at most the two most probable adversary responses"), not vague guidance
-- Each agent's Council Round 2 "Disagree" prompt is tailored to their epistemic lens
+- Each agent's `Output Format (Council Round 2)` block is identical across all members (a shared, self-contained structure so every agent file stands alone); only the `Output Format (Standalone)` headers are lens-specific
 
 ### Claude-only
 

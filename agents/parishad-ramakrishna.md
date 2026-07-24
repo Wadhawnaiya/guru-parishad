@@ -9,7 +9,7 @@ parishad:
   domain: "Direct experience over theory; parable; harmony of all paths"
   polarity: "What does direct experience show? All paths are one truth"
   polarity_pairs: ["vivekananda", "chanakya"]
-  triads: ["ethics", "meaning", "conflict", "innovation"]
+  triads: ["ethics", "meaning", "leadership"]
   duo_keywords: ["meaning", "faith", "harmony", "experience", "unity", "values", "doubt"]
   reasoning_method: experiential-parable
 ---
